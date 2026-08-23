@@ -2,9 +2,9 @@ import math
 import matplotlib.pyplot as plt
 
 # Parameter Populasi (dengan nilai konstan)
-N_0 = 1000  # Jumlah populasi awal
-b = 0.03    # Laju kelahiran
-d = 0.01    # Laju kematian
+N_0 = 290125073  # Jumlah populasi indonesia pada tahun 2026
+b = 4440000/N_0    # Laju kelahiran di indonesia
+d = 1800000/N_0    # Laju kematian di indonesia
 
 # Menghitung laju pertumbuhan populasi 
 r = b - d  
@@ -32,4 +32,4 @@ plt.savefig("pertumbuhan_populasi.png", dpi=300, bbox_inches="tight")  # Menyimp
 
 print("pertumbuhan_populasi.png")
 
-print(N_t,'Warga di tahun ke-',t)
+print(f"{N_t},Warga di tahun ke-,{t}")

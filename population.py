@@ -20,6 +20,7 @@ waktu = range(0, t + 1)
 populasi = [N_0 * math.exp(r * tahun) for tahun in waktu]
 
 # Membuat grafik pertumbuhan populasi
+# Membuat grafik bantuan AI 
 plt.plot(waktu, populasi, marker='o')
 plt.title('Pertumbuhan Populasi Eksponensial')
 plt.xlabel('Tahun')

@@ -62,7 +62,7 @@ pip install numpy matplotlib scipy
 ### Osilasi Overdamped
 
 <p align="center">
-  <img src="Media/charts/osilasi_overdamped" Width="600">
+  <img src="Media/charts/osilasi_overdamped.png" Width="600">
 </p>
 
 

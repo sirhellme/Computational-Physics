@@ -82,4 +82,4 @@ Physics Student
 Universitas Tanjungpura  
 Pontianak, Indonesia
 
-📚 Physics | 💻 Computational Physics | 🔬 Numerical Methods
+📚 Physics | 💻 Computational Physics

@@ -76,6 +76,8 @@ pip install numpy matplotlib scipy
 
 **Helmi Saputra Bratama**
 
+**NIM: H1021241015**
+
 Physics Student  
 Universitas Tanjungpura  
 Pontianak, Indonesia

@@ -7,10 +7,8 @@ untuk mata kuliah Fisika Komputasi.
 
 - [Tentang Project](#tentang-project)
 - [Metode yang Digunakan](#metode-yang-digunakan)
-- [Struktur Folder](#struktur-folder)
 - [Instalasi](#instalasi)
-- [Cara Menjalankan](#cara-menjalankan)
-- [Contoh](#contoh)
+- [Output charts](#output-charts)
 - [Teknologi](#teknologi)
 - [Author](#author)
 
@@ -31,6 +29,25 @@ Beberapa metode yang terdapat dalam repository ini:
 - Simulasi Osilasi
 - Model Pertumbuhan Populasi
 
+## Instalasi
+
+Clone Repository:
+
+```bash
+git clone https://github.com/username/Computational-Physics.git
+cd Computational-Physics
+```
+
+Install Dependencies:
+
+```bash
+pip install numpy matplotlib scipy
+```
+
+## Output Charts
+
+### Pertumbuhan Populasi
+
 <p align="center">
-  <img src="pertumbuhan_populasi.png" width="600">
+  <img src="Media/charts/pertumbuhan_r_konstan.png" Width="300">
 </p>

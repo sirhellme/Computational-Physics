@@ -9,12 +9,11 @@ untuk mata kuliah Fisika Komputasi.
 - [Metode yang Digunakan](#metode-yang-digunakan)
 - [Instalasi](#instalasi)
 - [Output charts](#output-charts)
-- [Teknologi](#teknologi)
 - [Author](#author)
 
 ---
 
-## 🔬 Tentang Project
+## Tentang Project
 
 Project ini berisi implementasi berbagai metode numerik yang
 digunakan dalam pembelajaran Fisika Komputasi.
@@ -22,7 +21,7 @@ digunakan dalam pembelajaran Fisika Komputasi.
 Tujuan project ini adalah memahami bagaimana konsep matematika
 dan fisika dapat diterapkan menggunakan pemrograman Python.
 
-## 🧮 Metode yang Digunakan
+## Metode yang Digunakan
 
 Beberapa metode yang terdapat dalam repository ini:
 
@@ -46,8 +45,39 @@ pip install numpy matplotlib scipy
 
 ## Output Charts
 
-### Pertumbuhan Populasi
+### Pertumbuhan Populasi r Konstan
 
 <p align="center">
-  <img src="Media/charts/pertumbuhan_r_konstan.png" Width="300">
+  <img src="Media/charts/pertumbuhan_r_konstan.png" Width="600">
 </p>
+
+
+### Pertumbuhan Populasi r Non-Konstan
+
+<p align="center">
+  <img src="Media/charts/pertumbuhan_r_non_konstan.png" Width="600">
+</p>
+
+
+### Osilasi Overdamped
+
+<p align="center">
+  <img src="Media/charts/osilasi_overdamped" Width="600">
+</p>
+
+
+### Osilasi Underdamped
+
+<p align="center">
+  <img src="Media/charts/osilasi_underdamped.png" Width="600">
+</p>
+
+## Author
+
+**Helmi Saputra Bratama**
+
+Physics Student  
+Universitas Tanjungpura  
+Pontianak, Indonesia
+
+📚 Physics | 💻 Computational Physics | 🔬 Numerical Methods

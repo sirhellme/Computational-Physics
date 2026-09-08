@@ -59,7 +59,7 @@ pip install numpy matplotlib scipy
 </p>
 
 
-### Osilasi Overdamped
+### Osilasi Sederhana
 
 <p align="center">
   <img src="Media/charts/osilasi_overdamped.png" Width="600">

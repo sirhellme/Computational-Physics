@@ -1,5 +1,5 @@
 # model osilasi harmonik sederhana
-# x_i = 2*x_(i-1) - x_(i-2) - omega^2*x_(i-1)*h^2
+
 # x_1 = x_0 + v_0*h
 # v_1 = v_0 - omega^2*x_0*h
 
@@ -25,6 +25,7 @@ v1 = v0 - Osq*x0*h
 x = [x0, x1]
 
 for i in range(2, len(t)):
+    # x_i = 2*x_(i-1) - x_(i-2) - omega^2*x_(i-1)*h^2
     x.append(2*x[i-1] - x[i-2] - Osq*x[i-1]*h**2)
 
 print(len(t))

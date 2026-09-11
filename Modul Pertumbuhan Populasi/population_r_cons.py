@@ -5,14 +5,12 @@ import matplotlib.pyplot as plt
 
 #konstanta
 r = 0.2
-#
 
 # timestep
 h= 0.2 # dalam bulan
 
 # waktu-> grid
 t = np.arange(0,12,h)
-
 
 #Nilai awal
 N0 = 2

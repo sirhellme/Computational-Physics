@@ -1,4 +1,4 @@
-# Computational Physics
+# Advance Computational Physics
 
 Kumpulan implementasi metode numerik dan simulasi dalam Python
 untuk mata kuliah Fisika Komputasi.
@@ -52,7 +52,7 @@ pip install numpy matplotlib scipy
 </p>
 
 
-### Pertumbuhan Populasi r Non-Konstan
+### Pertumbuhan Populasi r Logistic
 
 <p align="center">
   <img src="Media/charts/pertumbuhan_r_non_konstan.png" Width="600">

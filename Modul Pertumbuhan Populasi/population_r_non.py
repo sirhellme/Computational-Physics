@@ -14,8 +14,8 @@ M = 20 # kapasitas lingkungan
 d = 0.05 # kematian akibat ancaman 
 
 # parameter bencana
-p_bencana = 0.1 # probabilitas bencana
-D = 0.2 # dampak bencana (misal 20% populasi hilang)
+p_bencana = 0.05 # probabilitas bencana
+D = 0.1 # dampak bencana (misal 20% populasi hilang)
 
 # waktu
 t = np.arange(0,12,h)
@@ -32,21 +32,26 @@ Nhalf = [Nh]
 
 # Loop untuk menghitung populasi pada setiap timestep
 for i in range(len(t)-1):
+
     # laju pertumbuhan pada N[i]
-    r = r0*(1-N0/M)-d
+    r = r0*(1-N[i]/M)-d
 
     # N(i+1)
-    N.append(N[i] + h*r*Nhalf[i])
+    N_baru = N[i] + h*r*Nhalf[i]
 
     # cek apakah terjadi bencana
     if np.random.random() < p_bencana:
-        N[i+1] *= (1-D)  # populasi berkurang akibat bencana
+        N_baru *= (1-D)  # populasi berkurang akibat bencana
 
     # laju pertumbuhan pada Nhalf[i]
     r_half = r0*(1-Nhalf[i]/M) - d
 
     # Nhalf(i+1)
-    Nhalf.append(Nhalf[i] + h*r_half*N[i+1])
+    Nhalf_baru = Nhalf[i] + h*r_half*N_baru
+
+    # Simpan
+    N.append(N_baru)
+    Nhalf.append(Nhalf_baru)
 
 # Plotting
 plt.plot(t,N, label='dengan ancaman')

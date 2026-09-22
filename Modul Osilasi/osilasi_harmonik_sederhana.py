@@ -28,6 +28,7 @@ for i in range(2, len(t)):
     # x_i = 2*x_(i-1) - x_(i-2) - omega^2*x_(i-1)*h^2
     x.append(2*x[i-1] - x[i-2] - Osq*x[i-1]*h**2)
 
+# plot kan untuk charts
 plt.plot(t,x)
 plt.xlabel('Time (s)')
 plt.ylabel('Position (m)')

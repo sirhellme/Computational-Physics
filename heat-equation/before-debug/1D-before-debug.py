@@ -42,7 +42,7 @@ while t < tf:
     # update time
     t = t + dt 
     # update old temperature into current temperature
-    u_old = u 
+    u_old = u
 
 plt.plot(u, label = 't = '+str(t))
 plt.legend()

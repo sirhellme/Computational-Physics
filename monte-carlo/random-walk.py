@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Parameters
 periods = 100
-simulations = 1000
+simulations = 100
 start = 0
 
 # Generate random numbers

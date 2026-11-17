@@ -1,4 +1,4 @@
-# Advance Computational Physics
+# Computational Physics
 
 Kumpulan implementasi metode numerik dan simulasi fisika dalam Python
 untuk mata kuliah Fisika Komputasi.
@@ -10,6 +10,7 @@ untuk mata kuliah Fisika Komputasi.
 - [Daftar Project](#daftar-project)
 - [Metode yang Digunakan](#metode-yang-digunakan)
 - [Instalasi](#instalasi)
+- [Cara Menjalankan](#cara-menjalankan)
 - [Output Charts](#output-charts)
 - [Author](#author)
 
@@ -30,11 +31,13 @@ computational-physics/
 ├── heat-equation/
 │   ├── heat-rod.py
 │   ├── heat-rod-centered.py
-│   └── constant-t.py
+│   └── references.py
 ├── monte-carlo/
 │   ├── integral-mc.py
 │   ├── pi-estimate.py
-│   └── random-walk.py
+│   ├── random-walk.py
+│   ├── random-walk-2D.py
+│   └── random-walk-project.py
 ├── oscillation/
 │   ├── simple-oscillation-harmonic.py
 │   └── damped-oscillation.py
@@ -42,16 +45,20 @@ computational-physics/
 │   ├── pg-r-constant.py
 │   └── pg-r-non-constant.py
 └── media/
+    ├── heat-equation/
+    ├── monte-carlo/
+    ├── oscillation/
+    └── population-growth/
 ```
 
 ## Daftar Project
 
 | Project | Deskripsi | File |
 | --- | --- | --- |
-| **Heat Equation** | Simulasi difusi panas 1D pada kawat aluminium alloy menggunakan skema FTCS eksplisit, dengan variasi kondisi batas Dirichlet/Neumann dan suhu tetap. | `heat-equation/` |
-| **Monte Carlo** | Estimasi nilai π, integrasi numerik, dan simulasi random walk menggunakan bilangan acak. | `monte-carlo/` |
+| **Heat Equation** | Simulasi difusi panas 1D pada kawat aluminium alloy menggunakan skema FTCS eksplisit, dengan variasi waktu simulasi, time step, dan kondisi awal panas terpusat di tengah. | `heat-equation/` |
+| **Monte Carlo** | Estimasi nilai π, integrasi numerik dengan metode Monte Carlo, dan simulasi random walk 2D beserta perhitungan koefisien difusi dari MSD. | `monte-carlo/` |
 | **Oscillation** | Simulasi osilasi harmonik sederhana dan osilasi teredam menggunakan metode beda hingga. | `oscillation/` |
-| **People Growth** | Model pertumbuhan populasi eksponensial (r konstan) dan logistik (r tidak konstan), termasuk skenario ancaman dan bencana. | `people-growth/` |
+| **People Growth** | Model pertumbuhan populasi eksponensial dengan laju konstan dan model logistik dengan ancaman serta skenario bencana. | `people-growth/` |
 
 ## Metode yang Digunakan
 
@@ -59,8 +66,9 @@ Beberapa metode yang terdapat dalam repository ini:
 
 - Metode beda hingga (finite difference) untuk persamaan panas dan osilasi
 - Skema FTCS (Forward Time Centered Space) eksplisit
+- Kondisi batas Dirichlet dan Neumann (adiabatik)
 - Integrasi Monte Carlo dan estimasi π
-- Simulasi random walk
+- Simulasi random walk 2D dan analisis Mean Square Displacement (MSD)
 - Model pertumbuhan populasi eksponensial dan logistik
 
 ## Instalasi
@@ -75,35 +83,47 @@ cd Computational-Physics
 Install Dependencies:
 
 ```bash
-pip install numpy matplotlib scipy
+pip install numpy matplotlib
 ```
+
+`pi-estimate.py` menggunakan backend `QtAgg`, sehingga PyQt6 mungkin diperlukan
+jika ingin menampilkan grafiknya secara interaktif:
+
+```bash
+pip install PyQt6
+```
+
+## Cara Menjalankan
 
 Jalankan salah satu script, misalnya:
 
 ```bash
 python heat-equation/heat-rod.py
+python monte-carlo/pi-estimate.py
+python oscillation/damped-oscillation.py
+python people-growth/pg-r-non-constant.py
 ```
 
 ## Output Charts
 
 ### Heat Equation
 
-#### Panas Merambat dari Ujung Kiri
+#### Variasi Waktu Simulasi
 
 <p align="center">
-  <img src="media/fd-application/left-heat.png" width="600">
+  <img src="media/heat-equation/heat-equation-T-var.png" width="600">
+</p>
+
+#### Variasi Time Step
+
+<p align="center">
+  <img src="media/heat-equation/heat-equation-dt-var.png" width="600">
 </p>
 
 #### Panas Dipusatkan di Tengah Kawat
 
 <p align="center">
-  <img src="media/fd-application/centered-heat.png" width="600">
-</p>
-
-#### Suhu Tetap
-
-<p align="center">
-  <img src="media/fd-application/t-constant.png" width="600">
+  <img src="media/heat-equation/heat-rod-centered.png" width="600">
 </p>
 
 ### Monte Carlo
@@ -123,7 +143,7 @@ python heat-equation/heat-rod.py
 #### Random Walk
 
 <p align="center">
-  <img src="media/monte-carlo/random-walk.png" width="600">
+  <img src="media/monte-carlo/random-walk-diffusion.png" width="600">
 </p>
 
 ### Oscillation

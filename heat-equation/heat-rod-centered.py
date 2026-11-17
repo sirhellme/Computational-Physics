@@ -1,14 +1,3 @@
-# Simulasi difusi panas 1D pada kawat aluminium alloy
-# Panjang 50 cm, k = 200 W/(m K), rho = 2.7e3 kg/m^3, c = 900 J/(kg K)
-#
-# Versi "centered heat":
-#   Berbeda dari heat-rod.py, panas awal dipusatkan di TENGAH kawat,
-#   dan KEDUA ujung bersifat adiabatik (Neumann), sehingga total panas
-#   di dalam kawat tetap kekal selama simulasi.
-#
-# Persamaan:  u_t = beta * u_xx + g(t),   beta = k / (rho c)
-# Skema:      FTCS eksplisit
-
 import numpy as np
 import matplotlib.pyplot as plt
 
